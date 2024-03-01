@@ -9,7 +9,6 @@ on:
 jobs:
   call-test-workflow:
     uses: skrootne/workflows/.github/workflows/test.yml@main
-    secrets: inherit
 
   build:
     runs-on: ubuntu-latest
