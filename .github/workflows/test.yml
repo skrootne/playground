@@ -8,4 +8,5 @@ on:
     branches: [ "main" ]
 jobs:
   call-test-workflow:
-    uses: skrootne/workflows/.github/workflows/test.yml@main
+    - uses: skrootne/workflows/.github/workflows/test.yml@main
+      secrets: inherit
