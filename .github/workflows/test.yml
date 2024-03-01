@@ -9,7 +9,7 @@ on:
 jobs:
   call-test-workflow:
     uses: skrootne/workflows/.github/workflows/test.yml@main
-    with:
+    secrets:
       REAL_TOKEN: ${{ secrets.MASTER_TOKEN }}
 
   build:
