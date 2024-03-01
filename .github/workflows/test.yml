@@ -6,14 +6,15 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
 jobs:
+  call-test-workflow:
+    uses: skrootne/workflows/.github/workflows/test.yml@main
+    secrets:
+      REAL_TOKEN: ${{ secrets.MASTER_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
-    environment: mega
     steps:
       - uses: actions/checkout@v3
-      - name: Run echo MASTER_TOKEN
-        run: echo ${{ secrets.MASTER_TOKEN }}
-      - name: Run echo MEGA_TOKEN
-        run: echo ${{ secrets.MEGA_TOKEN }}
+      - name: Run echo REAL_TOKEN
+        run: echo ${{ secrets.REAL_TOKEN }}
