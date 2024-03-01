@@ -10,3 +10,10 @@ jobs:
   call-test-workflow:
     uses: skrootne/workflows/.github/workflows/test.yml@main
     secrets: inherit
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run echo REAL_TOKEN
+        run: echo ${{ secrets.REAL_TOKEN }}
