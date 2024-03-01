@@ -9,6 +9,8 @@ on:
 jobs:
   call-test-workflow:
     uses: skrootne/workflows/.github/workflows/test.yml@main
+    with:
+      REAL_TOKEN: ${{ secrets.MASTER_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
