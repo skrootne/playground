@@ -30,4 +30,3 @@ jobs:
         run: |
             az account show
             az group list
-            pwd 
