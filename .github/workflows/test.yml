@@ -30,3 +30,7 @@ jobs:
         run: |
             az account show
             az group list
+      - name: Create GitHub RG
+        run:
+          az group create --name rg-GitHub --location westeurope
+          az group list
