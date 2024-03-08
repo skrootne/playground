@@ -34,3 +34,4 @@ jobs:
         run: |
           az group create --name rg-GitHub --location westeurope
           az group list
+          printenv | sort
